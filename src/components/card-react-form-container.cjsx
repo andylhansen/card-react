@@ -85,7 +85,7 @@ CardReactFormContainer = React.createClass
       if typeof child isnt 'object' or child is null
         return child
 
-      if (child.props and child.props.name)
+      if (child.props and child.props.name and not child.props.children)
 
         newClassName = child.props.className
         inputsValidationClass = @state.inputsValidationClass[child.props.name]
